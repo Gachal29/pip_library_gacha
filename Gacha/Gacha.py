@@ -5,7 +5,6 @@ import SettingRules
 class Generate:
     __debug: bool = False
 
-    __columns: list[str]
     __contents: list[dict[str:any]] = None
 
     __thema: str = None
@@ -183,28 +182,5 @@ class Generate:
         return contents
 
 if __name__ == "__main__":
-    # gacha = Generate(
-    #     contents=[
-    #         {
-    #             "main": "test1",
-    #             "flag": "T",
-    #             "num": 10
-    #         },
-    #         {
-    #             "main": "test2",
-    #             "flag": "T",
-    #             "num": 1
-    #         },
-    #         {
-    #             "main": "test3",
-    #             "flag": "T",
-    #             "num": 1
-    #         }
-    #     ],
-    #     rules="./test_rules.json",
-    #     # debug=True
-    # )
-    # gacha = Generate(contents="./sample_contents/test_contents.csv", debug=True)
-    gacha = Generate(contents="./sample_contents/test_contents.json")
-    result = gacha.gachal()
-    print(f"{gacha.get_thema()}: {result}")
+    gacha = Generate("./test_contents/test_contents.csv", "./test_contents/rules.json", True)
+    print(gacha.gachal())

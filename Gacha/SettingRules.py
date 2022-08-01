@@ -7,11 +7,8 @@ class SettingRules:
     __rules: json = None
     __rule_items: list[str] = None
 
-    # sys.path.append(os.path.abspath("DefaultRules"))
-    __BASE_DIR: str = os.getcwd()
-    # __default_rules_file_path: str = __BASE_DIR + "/rules.json"
-
-    __default_rules_file_path = "../DefaultRules/rules.json"
+    __BASE_DIR: str = os.path.dirname(__file__)
+    __default_rules_file_path = __BASE_DIR + "/DefaultRules/rules.json"
     
     def setting_rules(self, rules_file_path: str = None):
         if self.__debug:
