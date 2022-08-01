@@ -1,0 +1,22 @@
+{
+    "thema": "ガチャ",
+    "main_content_column": "main",
+    "result_format": "main_only",
+    "sequencing": false,
+
+    "build_flag": true,
+    "build_flag_rule": {
+        "appeared": true,
+        "not_content_num": false
+    },
+    "build_flag_column": "flag",
+    "build_flag_value": "F",
+
+    "content_num_manage": false,
+    "content_num_manage_rule": {
+        "up": false,
+        "down": true
+    },
+    "content_num_manage_column": "num",
+    "content_num_manage_fluctuation": 1
+}
